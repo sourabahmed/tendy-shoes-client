@@ -1,7 +1,7 @@
 
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
 
 
 const EditProducts = () => {
@@ -42,7 +42,7 @@ const EditProducts = () => {
     })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      console.log(`data from edit: ${data}`);
       if(data){
         toast.success('Product edited successfully!');
       }

@@ -1,4 +1,5 @@
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
+
 
 const AddProducts = () => {
 
@@ -30,8 +31,8 @@ const AddProducts = () => {
         .then((data) => {
           console.log(data);
           form.reset();
-          if(data._id){
-            toast.success('Product added successfully!!!');
+          if(data){
+            toast.success('Product added successfully!');
           }
         });
       }

@@ -1,4 +1,5 @@
 
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const Allproduct = ({ product, onDelete }) => {
