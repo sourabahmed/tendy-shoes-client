@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
-import Login from "../../pages/Login";
+import useAuth from "../../hooks/useAuth";
 
 
 function Navbar() {
+    const {logout, user} = useAuth();
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        logout();
+      }
 
   return (
     <>
@@ -27,7 +33,7 @@ function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <Login />
+  {!user?.email?<Link className="btn" to={"/login"}>Login</Link>:<Link onClick={handleLogout} className="btn" >Logout</Link>}
   </div>
 </div>
     </>
