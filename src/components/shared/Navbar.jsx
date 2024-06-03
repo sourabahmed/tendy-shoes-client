@@ -20,7 +20,8 @@ function Navbar() {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to={"/about"}>About</Link></li>
-        <li><Link to={"/contact"}>Contact us</Link></li>
+      <li><Link to={"/contact"}>Contact us</Link></li>
+      {!user? " ":<li><Link to={"/dashboard"}>Dashboard</Link></li>}
       </ul>
     </div>
     <Link to={"/"} className="btn btn-ghost text-xl">Tendy Shoes</Link>
@@ -29,6 +30,7 @@ function Navbar() {
     <ul className="menu menu-horizontal px-1">
         <li><Link to={"/about"}>About</Link></li>
         <li><Link to={"/contact"}>Contact us</Link></li>
+        {!user? " ":<li><Link to={"/dashboard"}>Dashboard</Link></li>}
         
     </ul>
   </div>
