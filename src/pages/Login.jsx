@@ -15,7 +15,21 @@ function Login() {
     const { user, googleLogin, signIn } = useAuth();
     const hanldleGoogleLogin = (e) => {
         e.preventDefault();
-        googleLogin()
+        googleLogin().then((data) => {
+          if (data?.user?.email) {
+            const userInfo = {
+              email: data?.user?.email,
+              name: data?.user?.displayName,
+            };
+            fetch("https://localhost:3000/user", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(userInfo),
+            })
+          }
+        });
     }
 
     const handleSUbmit = async (e) => {

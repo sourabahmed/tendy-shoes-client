@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Product from "../home/Product";
 
 function Products() {
-  const [products, setProducts] = useState();
-  const [searchValue, setSearchValue] = useState();
+  const [products, setProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   console.log(searchValue)
   
   useEffect(() => {
@@ -23,7 +23,7 @@ function Products() {
         </div>
         <div className="flex flex-wrap justify-center gap-4">
       {products?.filter((product) => {
-        return searchValue?.toLowerCase() === "" ? product : product?.name?.toLowerCase()?.includes(searchValue)
+        return searchValue?.toLowerCase() === " " ? product : product?.name?.toLowerCase()?.includes(searchValue)
       }) .map((product) =>  <Product product={product} key={product._id}/>)}
       </div>
       </div>

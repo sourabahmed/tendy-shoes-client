@@ -19,7 +19,7 @@ const Allproducts = () => {
 
   return (
     <div className="flex justify-center flex-wrap" >
-      <h1 className="text-4xl m-5 font-bold text-center">All Produts</h1>
+      <h1 className="text-4xl m-5 font-bold text-center">All Products</h1>
       <div className="flex justify-center flex-wrap gap-4">
         {products.map((product) => (
           <Allproduct

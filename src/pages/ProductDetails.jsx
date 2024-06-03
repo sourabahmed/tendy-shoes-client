@@ -1,22 +1,23 @@
 import { useLoaderData } from "react-router-dom";
 
-
 function ProductDetails() {
-    const products = useLoaderData();
+  const product = useLoaderData();
+  const { description, imageUrl, price, name } = product;
 
-  const {description, imageUrl, price, name } = products;
   return (
-    <div className="flex justify-center align-center m-10">
-      <div className="card w-96 bg-base-100 shadow-xl">
-    <figure><img src={imageUrl} alt="Shoes" /></figure>
-    <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p>{price}</p>
-        <p>{description}</p>
+    <div className="flex justify-center items-center m-10">
+      <div className="max-w-md w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <figure>
+          <img src={imageUrl} alt={name} className="w-full h-64 object-cover" />
+        </figure>
+        <div className="p-6">
+          <h2 className="text-2xl font-bold mb-2">{name}</h2>
+          <p className="text-xl font-semibold text-gray-900 mb-4">${price}</p>
+          <p className="text-gray-700 text-base">{description}</p>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-  )
+  );
 }
 
-export default ProductDetails
+export default ProductDetails;
