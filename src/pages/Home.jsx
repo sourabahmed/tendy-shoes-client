@@ -1,5 +1,7 @@
 import Banner from "../components/home/Banner"
+import NewsletterSignup from "../components/home/NewsletterSignup"
 import Products from "../components/home/Products"
+import Reviews from "../components/home/Reviews"
 
 
 function Home() {
@@ -7,6 +9,9 @@ function Home() {
     <>
     <Banner /> 
     <Products />
+
+    <Reviews />
+    <NewsletterSignup />
     </>
   )
 }
