@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAY1w_1LLg8-XFEuXnKJurodR5EWIQQKLw",
-    authDomain: "stride-practice-d655b.firebaseapp.com",
-    projectId: "stride-practice-d655b",
-    storageBucket: "stride-practice-d655b.appspot.com",
-    messagingSenderId: "995672820857",
-    appId: "1:995672820857:web:585be0abe93fd49fd418a8"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.ITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
   };
 
 // Initialize Firebase
