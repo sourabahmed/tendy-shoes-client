@@ -2,7 +2,7 @@
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
-const Allproduct = ({ product, onDelete }) => {
+const Singleproduct = ({ product, onDelete }) => {
   const token = localStorage.getItem("token");
   const { _id, name, brand, price, description, imageUrl } = product;
 
@@ -59,4 +59,4 @@ const Allproduct = ({ product, onDelete }) => {
   );
 };
 
-export default Allproduct;
+export default Singleproduct;

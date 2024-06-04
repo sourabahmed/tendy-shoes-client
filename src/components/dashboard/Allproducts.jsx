@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import Allproduct from "./Allproduct"
+import Singleproduct from "./Singleproduct";
 
 const Allproducts = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,7 @@ const Allproducts = () => {
       <h1 className="text-4xl m-5 font-bold text-center">All Products</h1>
       <div className="flex justify-center flex-wrap gap-4">
         {products.map((product) => (
-          <Allproduct
+          <Singleproduct
             key={product._id}
             product={product}
             onDelete={handleDeleteProduct}
