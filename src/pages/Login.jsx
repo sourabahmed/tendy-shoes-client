@@ -2,6 +2,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import useAuth from "../hooks/useAuth";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 
 function Login() {
@@ -12,7 +13,7 @@ function Login() {
   
   const from = location?.state?.from?.pathname || "/";
 
-    const { user, googleLogin, signIn } = useAuth();
+    const { user, googleLogin, signIn, resetPassword } = useAuth();
     const hanldleGoogleLogin = (e) => {
         e.preventDefault();
         googleLogin().then((data) => {
@@ -43,6 +44,12 @@ function Login() {
       await signIn(email, password);
     };
 
+    const handleResetPassword = (e) => {
+      e.preventDefault();
+      resetPassword(email);
+      toast.success("Email sent for password reset")
+    }
+
     useEffect(() => {
       if (user) {
         navigate(from, { replace: true });
@@ -71,7 +78,7 @@ function Login() {
           </label>
           <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <button onClick={handleResetPassword} className="label-text-alt link link-hover">Forgot password?</button>
             <Link to={"/register"} className="label-text-alt link link-hover">Don't have an account? Register</Link>
           </label>
         </div>

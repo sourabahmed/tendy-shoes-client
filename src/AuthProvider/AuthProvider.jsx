@@ -5,6 +5,7 @@ import {
     getAuth,
     onAuthStateChanged,
     signInWithEmailAndPassword,
+    sendPasswordResetEmail,
     signInWithPopup,
     signOut,
   } from "firebase/auth";
@@ -30,6 +31,19 @@ import {
       setLoading(true);
       return signInWithEmailAndPassword(auth, email, password);
     };
+
+    const resetPassword = (email) => {
+      sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+    };
   
     const logout = () => {
       return signOut(auth).then(() => setUser(null));
@@ -54,7 +68,7 @@ import {
       };
     }, []);
   
-    const authInfo = { user, googleLogin, createUser, signIn, logout, loading };
+    const authInfo = { user, googleLogin, createUser, resetPassword, signIn, logout, loading };
     return (
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
     );
