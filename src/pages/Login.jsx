@@ -28,7 +28,9 @@ function Login() {
               },
               body: JSON.stringify(userInfo),
             }).then(res => res.json())
-            .then(data => console.log(data))
+            .then((data) => {
+              localStorage.setItem("token", data?.token);
+            });
           }
         });
     }

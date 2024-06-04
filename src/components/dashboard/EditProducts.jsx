@@ -136,6 +136,7 @@ const EditProducts = () => {
   const [imageUrl, setImageUrl] = useState(products.imageUrl);
 
   const handleSubmit = async (e) => {
+    const token = localStorage.getItem("token");
     e.preventDefault();
 
     const form = e.target;
@@ -156,6 +157,7 @@ const EditProducts = () => {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
+          authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(data),
       })

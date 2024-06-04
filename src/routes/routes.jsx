@@ -13,6 +13,7 @@ import AddProducts from "../components/dashboard/AddProducts";
 import Allproducts from "../components/dashboard/Allproducts";
 import ProductDetails from "../pages/ProductDetails";
 import EditProducts from "../components/dashboard/EditProducts";
+import EditProfile from "../pages/EditProfile";
 
 
 
@@ -59,6 +60,19 @@ const router = createBrowserRouter([
             index: true,
             element: <Dashboard/>
         },
+        ,
+      {
+        path: "profile/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `http://localhost:3000/user/get/${params.id}`
+          ),
+      },
         {
             path: "add-products",
             element: (
