@@ -21,13 +21,14 @@ function Login() {
               email: data?.user?.email,
               name: data?.user?.displayName,
             };
-            fetch("https://localhost:3000/user", {
+            fetch("http://localhost:3000/user", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(userInfo),
-            })
+            }).then(res => res.json())
+            .then(data => console.log(data))
           }
         });
     }
