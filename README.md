@@ -1,8 +1,26 @@
-# React + Vite
+# Tendy Shoes Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A ecommerce website for selling different type of shoes.
 
-Currently, two official plugins are available:
+## Website Description
+1: This project has user authentication including google login and email password login
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2: It has CRUD operation
+
+3: Profile management
+
+4: Search Filter implementation
+
+1: First of all you have to clone the git repository
+
+2: Now you have to install npm packages by npm install command
+
+3:lastly you have to start project by npm run dev command
+
+## How to open this project in locally
+
+1: First of all you have to clone the git repository
+
+2: Now you have to install npm packages by npm install command
+
+3:lastly you have to start project by npm run dev command
