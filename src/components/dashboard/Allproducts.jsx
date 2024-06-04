@@ -1,8 +1,6 @@
 
-
 import { useEffect, useState } from "react";
-import Allproduct from "./Allproduct";
-
+import Allproduct from "./Allproduct"
 
 const Allproducts = () => {
   const [products, setProducts] = useState([]);
