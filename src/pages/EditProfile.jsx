@@ -21,7 +21,7 @@
 //     };
 
 //     fetch(
-//       `http://localhost:3000/user/${data?.email}`,
+//       `https://tendy-shoes-server-h361.vercel.app/user/${data?.email}`,
 //       {
 //         method: "PATCH",
 //         headers: {
@@ -105,7 +105,7 @@ export default function EditProfile() {
     };
 
     fetch(
-      `http://localhost:3000/user/${data?.email}`,
+      `https://tendy-shoes-server-h361.vercel.app/user/${data?.email}`,
       {
         method: "PATCH",
         headers: {

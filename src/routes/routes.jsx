@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             path: "/products/:id",
             element: <ProductDetails />,
             loader: ({ params }) =>
-              fetch(`http://localhost:3000/products/${params.id}`),
+              fetch(`https://tendy-shoes-server-h361.vercel.app/products/${params.id}`),
         },
     ]
   },
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:3000/user/get/${params.id}`
+            `https://tendy-shoes-server-h361.vercel.app/user/get/${params.id}`
           ),
       },
         {
@@ -97,7 +97,7 @@ const router = createBrowserRouter([
             </PrivateRoute>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:3000/products/${params.id}`),
+            fetch(`https://tendy-shoes-server-h361.vercel.app/products/${params.id}`),
         },
         
         

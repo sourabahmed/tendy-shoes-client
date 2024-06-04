@@ -22,7 +22,7 @@ const AddProducts = () => {
   const confirmAdd = async (data, form) => {
     const answer = window.confirm("Are you sure you want to add this product?");
     if (answer) {
-      await fetch("http://localhost:3000/products", {
+      await fetch("https://tendy-shoes-server-h361.vercel.app/products", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

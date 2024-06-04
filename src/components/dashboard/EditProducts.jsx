@@ -33,7 +33,7 @@
 //     const answer = window.confirm("Are you sure to Edit this Product?");
 //     if(answer){
       
-//       await fetch(`http://localhost:3000/products/${products._id}`, {
+//       await fetch(`https://tendy-shoes-server-h361.vercel.app/products/${products._id}`, {
 //       method: "PATCH",
 //       headers: {
 //         "Content-type": "application/json",
@@ -153,7 +153,7 @@ const EditProducts = () => {
   const confirmEdit = async (data) => {
     const answer = window.confirm("Are you sure to Edit this Product?");
     if (answer) {
-      await fetch(`http://localhost:3000/products/${products._id}`, {
+      await fetch(`https://tendy-shoes-server-h361.vercel.app/products/${products._id}`, {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",

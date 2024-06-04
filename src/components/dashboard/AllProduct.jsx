@@ -7,7 +7,7 @@ const Allproduct = ({ product, onDelete }) => {
   const { _id, name, brand, price, description, imageUrl } = product;
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:3000/products/${_id}`, {
+    await fetch(`https://tendy-shoes-server-h361.vercel.app/products/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

@@ -22,7 +22,7 @@ function Login() {
               email: data?.user?.email,
               name: data?.user?.displayName,
             };
-            fetch("http://localhost:3000/user", {
+            fetch("https://tendy-shoes-server-h361.vercel.app/user", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -7,7 +7,7 @@ function Products() {
   console.log(searchValue)
   
   useEffect(() => {
-    fetch("http://localhost:3000/products/")
+    fetch("https://tendy-shoes-server-h361.vercel.app/products/")
       .then((res) => res.json())
       .then((data) => setProducts(data?.slice(0, 6)));
   }, []);
