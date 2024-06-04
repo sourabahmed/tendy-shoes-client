@@ -127,6 +127,7 @@ import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const EditProducts = () => {
+  const token = localStorage.getItem("token");
   const products = useLoaderData();
   
   const [name, setName] = useState(products.name);
@@ -136,7 +137,6 @@ const EditProducts = () => {
   const [imageUrl, setImageUrl] = useState(products.imageUrl);
 
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem("token");
     e.preventDefault();
 
     const form = e.target;

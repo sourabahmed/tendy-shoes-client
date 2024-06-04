@@ -5,8 +5,8 @@
 import toast from "react-hot-toast";
 
 const AddProducts = () => {
+  const token = localStorage.getItem("token");
   const handleSubmit = async (e) => {
-    const token = localStorage.getItem("token");
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
